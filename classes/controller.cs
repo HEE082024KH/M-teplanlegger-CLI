@@ -37,7 +37,7 @@ public class Controller
   }
   public void UpdateOrganizer()
   {
-    Console.WriteLine("Write who is in charge of the meeting");
+    Console.WriteLine("Write who is in charge of the meeting?");
     string? newOrganizer = Console.ReadLine();
     while (newOrganizer == null)
     {
@@ -48,6 +48,22 @@ public class Controller
       else
       {
         cMeetings.Organizer = newOrganizer;
+      }
+    }
+  }
+  public void UpdateParticipants()
+  {
+    Console.WriteLine("Write who is attending the meeting?");
+    string? newParticipants = Console.ReadLine();
+    while (newParticipants == null)
+    {
+      if (string.IsNullOrWhiteSpace(newParticipants))
+      {
+        Console.WriteLine("Input cannot be empty");
+      }
+      else
+      {
+        cMeetings.Participants = newParticipants;
       }
     }
   }
