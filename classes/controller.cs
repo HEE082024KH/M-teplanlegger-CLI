@@ -1,10 +1,12 @@
 public class Controller
 {
   Meetings cMeetings;
+  View cView;
 
-  public Controller(Meetings meetings)
+  public Controller(Meetings meetings, View view)
   {
     cMeetings = meetings;
+    cView = view;
   }
 
   public void UpdateTitle()
@@ -66,5 +68,9 @@ public class Controller
         cMeetings.Participants = newParticipants;
       }
     }
+  }
+  public void DisplayMeeting()
+  {
+    cView.Display(cMeetings);
   }
 }
