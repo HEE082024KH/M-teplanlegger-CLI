@@ -25,13 +25,11 @@ public class Controller
   public void UpdateDate()
   {
     Console.WriteLine("Input meeting date and time (format DD,MM,YYYY,HH,MM)");
-    if (DateTime.TryParse(Console.ReadLine(), out DateTime newDate))
-    {
-      DateTime date = newDate;
-    }
-    else
+    while (!DateTime.TryParse(Console.ReadLine(), out DateTime newDate))
     {
       Console.WriteLine("Incorrect format. Use DD,MM,YYYY,HH,MM.");
+      DateTime.TryParse(Console.ReadLine(), out newDate);
+      cMeetings.Date = newDate;
     }
   }
   public void UpdateOrganizer()
