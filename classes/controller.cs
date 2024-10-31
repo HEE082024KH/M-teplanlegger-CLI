@@ -35,4 +35,20 @@ public class Controller
       Console.WriteLine("Incorrect format. Use DD,MM,YYYY,HH,MM.");
     }
   }
+  public void UpdateOrganizer()
+  {
+    Console.WriteLine("Write who is in charge of the meeting");
+    string? newOrganizer = Console.ReadLine();
+    while (newOrganizer == null)
+    {
+      if (string.IsNullOrWhiteSpace(newOrganizer))
+      {
+        Console.WriteLine("Input cannot be empty");
+      }
+      else
+      {
+        cMeetings.Organizer = newOrganizer;
+      }
+    }
+  }
 }
