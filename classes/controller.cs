@@ -55,7 +55,7 @@ public class Controller
     }
     else
     {
-      cMeetings.Participants = newParticipants;
+      cMeetings.Participants.Add(newParticipants);
     }
   }
   public void DisplayMeeting()
