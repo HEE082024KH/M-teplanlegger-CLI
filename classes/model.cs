@@ -16,17 +16,18 @@ public class Meetings
     Participants = participants;
   }
 
-  // public List<Meetings>? MeetingsList(List<string> meetings)
-  // {
-  //   if (meetingList != null && Participants != null)
-  //   {
-  //     meetingList.AddRange(Participants);
-  //   }
-  //   else
-  //   {
-  //     Console.WriteLine("Lists cannot be empty");
-  //   }
-  // }
+  public List<Meetings>? MeetingsList(List<Meetings> meetings)
+  {
+    if (meetingList != null && Participants != null)
+    {
+      meetingList.AddRange(Participants);
+    }
+    else
+    {
+      Console.WriteLine("Lists cannot be empty");
+    }
+    return meetings;
+  }
 
   public override string ToString()
   {
