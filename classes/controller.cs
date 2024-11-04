@@ -77,6 +77,7 @@ public class Controller
   }
   public void DisplayMeeting()
   {
+    Console.WriteLine("-----------------");
     cView.Display(cMeetings);
   }
 }

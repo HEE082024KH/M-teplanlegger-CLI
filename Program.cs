@@ -13,7 +13,7 @@ class Program
         controller.UpdateDate();
         controller.UpdateTime();
         controller.UpdateOrganizer();
-        controller.UpdateParticipants();
+        // controller.UpdateParticipants();
         controller.DisplayMeeting();
     }
 }
