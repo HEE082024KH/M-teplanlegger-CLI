@@ -13,6 +13,12 @@ public class Meetings
     Participants = participants;
   }
 
+  // public List<Meetings>? MeetingsList(List<string> meetings)
+  // {
+  //   Meetings.Add(List<Participants);
+  //   return;
+  // }
+
   public override string ToString()
   {
     return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nParticipants: {Participants}";
