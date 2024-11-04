@@ -79,7 +79,7 @@ public class Controller
     }
     else
     {
-      cMeetings.Participants.Add(newParticipant);
+      cMeetings.Participants?.Add(newParticipant);
     }
   }
   public void DisplayMeeting()

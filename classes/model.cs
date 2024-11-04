@@ -31,6 +31,6 @@ public class Meetings
 
   public override string ToString()
   {
-    return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nTime: {Time}\nParticipants: {Participants}";
+    return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nTime: {Time}\nParticipants: {Participants.ForEach (string participants) => participants}";
   }
 }
