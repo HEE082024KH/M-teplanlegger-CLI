@@ -25,12 +25,14 @@ public class Controller
   }
   public void UpdateDate()
   {
-    Console.WriteLine("--------------------------------------");
     int day, month, year;
+    Console.WriteLine("--------------------------------------");
     Console.WriteLine("Write the day as a number");
     Int32.TryParse(Console.ReadLine(), out day);
+    Console.WriteLine("--------------------------------------");
     Console.WriteLine("Write the month as a number");
     Int32.TryParse(Console.ReadLine(), out month);
+    Console.WriteLine("--------------------------------------");
     Console.WriteLine("Write the year as a number");
     Int32.TryParse(Console.ReadLine(), out year);
 
@@ -40,10 +42,11 @@ public class Controller
 
   public void UpdateTime()
   {
-    Console.WriteLine("--------------------------------------");
     int hour, minutes, seconds = 0;
+    Console.WriteLine("--------------------------------------");
     Console.WriteLine("Write the hour as a number");
     Int32.TryParse(Console.ReadLine(), out hour);
+    Console.WriteLine("--------------------------------------");
     Console.WriteLine("Write the minutes as a number");
     Int32.TryParse(Console.ReadLine(), out minutes);
 
