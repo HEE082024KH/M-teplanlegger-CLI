@@ -10,8 +10,6 @@ class Program
 
         // controller.DisplayMeeting();
         // controller.UpdateTitle();
-        // controller.UpdateDate();
-        // controller.UpdateTime();
         controller.UpdateDateTime();
         // controller.UpdateOrganizer();
         // controller.UpdateParticipants();
