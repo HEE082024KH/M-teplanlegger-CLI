@@ -8,11 +8,6 @@ class Program
         View view = new();
         Controller controller = new(meetings, view);
 
-        // controller.DisplayMeeting();
-        // controller.UpdateTitle();
-        controller.UpdateDateTime();
-        // controller.UpdateOrganizer();
-        // controller.UpdateParticipants();
-        controller.DisplayMeeting();
+        controller.Run();
     }
 }

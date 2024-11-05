@@ -69,6 +69,16 @@ public class Controller
     {
       cMeetings.Participants?.Add(newParticipant);
     }
+    Console.WriteLine("Add more participants? (y/n)");
+    string? inputParticipants = Console.ReadLine();
+    switch (inputParticipants)
+    {
+      case "n":
+        return;
+      case "y":
+        UpdateParticipants();
+        return;
+    }
   }
 
   // Methods to output the list contents.
@@ -76,5 +86,30 @@ public class Controller
   {
     Console.WriteLine("-----------------");
     cView.Display(cMeetings);
+  }
+
+  public void Run()
+  {
+    Console.WriteLine("1. Add a new meeting");
+    Console.WriteLine("2. Display meetings");
+    int inputRun = Convert.ToInt32(Console.ReadLine());
+    switch (inputRun)
+    {
+      case 1:
+        UpdateTitle();
+        UpdateDateTime();
+        UpdateOrganizer();
+        UpdateParticipants();
+        return;
+      case 2:
+        DisplayMeeting();
+        Console.WriteLine("--Press enter to continue--");
+        Console.ReadLine();
+        Run();
+        return;
+      default:
+        Run();
+        break;
+    }
   }
 }

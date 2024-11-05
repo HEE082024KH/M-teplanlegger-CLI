@@ -4,7 +4,7 @@ public class Meetings
   public string? Title { get; set; }
   public string? Organizer { get; set; }
   public DateTime DateTime { get; set; }
-  public List<string>? Participants { get; set; }
+  public List<string>? Participants { get; set; } = new List<string>();
 
   // Define the list of meetings.
   public List<string>? meetingList { get; set; }
@@ -33,7 +33,7 @@ public class Meetings
   // Forcing the format of the output to have this structure.
   public override string ToString()
   {
-    // string listParticipants = String.Join(", ", Participants);
-    return $"Title: {Title}\nOrganizer: {Organizer}\nnDateTime: {DateTime}\nParticipants: {Participants}";
+    string listParticipants = String.Join(", ", Participants);
+    return $"Title: {Title}\nOrganizer: {Organizer}\nnDateTime: {DateTime}\nParticipants: {listParticipants}";
   }
 }
