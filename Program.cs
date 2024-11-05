@@ -12,8 +12,9 @@ class Program
         // controller.UpdateTitle();
         // controller.UpdateDate();
         // controller.UpdateTime();
+        controller.UpdateDateTime();
         // controller.UpdateOrganizer();
-        controller.UpdateParticipants();
+        // controller.UpdateParticipants();
         controller.DisplayMeeting();
     }
 }

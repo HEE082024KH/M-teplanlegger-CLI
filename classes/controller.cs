@@ -40,6 +40,22 @@ public class Controller
     DateOnly newDate = new DateOnly(year, month, day);
     cMeetings.Date = newDate;
   }
+  public void UpdateDateTime()
+  {
+    int year, month, day, hour, minutes, seconds = 0;
+    Console.WriteLine("Write the day as a number");
+    Int32.TryParse(Console.ReadLine(), out day);
+    Console.WriteLine("Write the month as a number");
+    Int32.TryParse(Console.ReadLine(), out month);
+    Console.WriteLine("Write the year as a number");
+    Int32.TryParse(Console.ReadLine(), out year);
+    Console.WriteLine("Write the hour as a number");
+    Int32.TryParse(Console.ReadLine(), out hour);
+    Console.WriteLine("Write the minutes as a number");
+    Int32.TryParse(Console.ReadLine(), out minutes);
+    DateTime newDateTime = new DateTime(year, month, day, hour, minutes, seconds);
+    cMeetings.DateTime = newDateTime;
+  }
 
   public void UpdateTime()
   {
@@ -54,6 +70,7 @@ public class Controller
     TimeOnly newTime = new TimeOnly(hour, minutes, seconds);
     cMeetings.Time = newTime;
   }
+
 
   public void UpdateOrganizer()
   {

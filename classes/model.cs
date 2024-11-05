@@ -5,17 +5,19 @@ public class Meetings
   public string? Organizer { get; set; }
   public DateOnly Date { get; set; }
   public TimeOnly Time { get; set; }
+  public DateTime DateTime { get; set; }
   public List<string>? Participants { get; set; }
 
   // Define the list of meetings.
   public List<string>? meetingList { get; set; }
 
-  public void Meeting(string title, string organizer, DateOnly date, TimeOnly time, List<string> participants)
+  public void Meeting(string title, string organizer, DateOnly date, TimeOnly time, DateTime dateTime, List<string> participants)
   {
     Title = title;
     Organizer = organizer;
     Date = date;
     Time = time;
+    DateTime = dateTime;
     Participants = participants;
   }
 
@@ -32,10 +34,10 @@ public class Meetings
     }
     return meetings;
   }
-
   // Forcing the format of the output to have this structure.
   public override string ToString()
   {
-    return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nTime: {Time}\nParticipants: {Participants.ForEach (string participants) => participants}";
+    // string tulleball = String.Join(", ", Participants);
+    return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nTime: {Time}\nParticipants: {Participants}";
   }
 }
