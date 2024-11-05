@@ -9,6 +9,7 @@ public class Controller
     cView = view;
   }
 
+  // Methods to update each element in the list.
   public void UpdateTitle()
   {
     Console.WriteLine("------------------------------");
@@ -82,6 +83,8 @@ public class Controller
       cMeetings.Participants?.Add(newParticipant);
     }
   }
+
+  // Methods to output the list contents.
   public void DisplayMeeting()
   {
     Console.WriteLine("-----------------");

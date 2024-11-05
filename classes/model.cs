@@ -1,10 +1,13 @@
 public class Meetings
 {
+  // Define the elements for each meeting.
   public string? Title { get; set; }
   public string? Organizer { get; set; }
   public DateOnly Date { get; set; }
   public TimeOnly Time { get; set; }
   public List<string>? Participants { get; set; }
+
+  // Define the list of meetings.
   public List<string>? meetingList { get; set; }
 
   public void Meeting(string title, string organizer, DateOnly date, TimeOnly time, List<string> participants)
@@ -16,6 +19,7 @@ public class Meetings
     Participants = participants;
   }
 
+  // If list entry it not empty, add it to the Participants list.
   public List<Meetings>? MeetingsList(List<Meetings> meetings)
   {
     if (meetingList != null && Participants != null)
@@ -29,6 +33,7 @@ public class Meetings
     return meetings;
   }
 
+  // Forcing the format of the output to have this structure.
   public override string ToString()
   {
     return $"Title: {Title}\nOrganizer: {Organizer}\nDate: {Date}\nTime: {Time}\nParticipants: {Participants.ForEach (string participants) => participants}";
