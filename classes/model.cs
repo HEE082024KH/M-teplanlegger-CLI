@@ -7,7 +7,7 @@ public class Meetings
   public List<string>? Participants { get; set; } = new List<string>();
 
   // Define the list of meetings.
-  public List<string>? meetingList { get; set; }
+  public List<string>? meetingsList { get; set; }
 
   public void Meeting(string title, string organizer, DateTime dateTime, List<string> participants)
   {
@@ -18,11 +18,11 @@ public class Meetings
   }
 
   // If list entry it not empty, add it to the Participants list.
-  public List<Meetings>? MeetingsList(List<Meetings> meetings)
+  public List<Meetings>? MeetingList(List<Meetings> meetings)
   {
-    if (meetingList != null && Participants != null)
+    if (meetingsList != null && Participants != null)
     {
-      meetingList.AddRange(Participants);
+      meetingsList.AddRange(Participants);
     }
     else
     {
