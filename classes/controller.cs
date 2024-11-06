@@ -92,7 +92,16 @@ public class Controller
   {
     Console.WriteLine("1. Add a new meeting");
     Console.WriteLine("2. Display meetings");
-    int inputRun = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("3. Exit");
+    int inputRun = 0;
+    try
+    {
+      inputRun = Convert.ToInt32(Console.ReadLine());
+    }
+    catch
+    {
+      Run();
+    }
     switch (inputRun)
     {
       case 1:
@@ -100,7 +109,8 @@ public class Controller
         UpdateDateTime();
         UpdateOrganizer();
         UpdateParticipants();
-        // cMeetings.MeetingList();
+        // cMeetings.Meeting();
+        Run();
         return;
       case 2:
         DisplayMeeting();
@@ -108,6 +118,8 @@ public class Controller
         Console.ReadLine();
         Run();
         return;
+      case 3:
+        break;
       default:
         Run();
         break;
