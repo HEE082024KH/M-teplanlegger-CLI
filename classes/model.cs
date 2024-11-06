@@ -34,6 +34,6 @@ public class Meetings
   public override string ToString()
   {
     string listParticipants = String.Join(", ", Participants);
-    return $"Title: {Title}\nOrganizer: {Organizer}\nnDateTime: {DateTime}\nParticipants: {listParticipants}";
+    return $"Title: {Title}\nOrganizer: {Organizer}\nDateTime: {DateTime}\nParticipants: {listParticipants}";
   }
 }
