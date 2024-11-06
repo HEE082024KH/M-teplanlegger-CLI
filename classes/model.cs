@@ -17,20 +17,12 @@ public class Meetings
     Participants = participants;
   }
 
-  // If list entry it not empty, add it to the Participants list.
-  public List<Meetings>? MeetingList(List<Meetings> meetings)
-  {
-    if (meetingsList != null && Participants != null)
-    {
-      meetingsList.AddRange(Participants);
-    }
-    else
-    {
-      Console.WriteLine("Lists cannot be empty");
-    }
-    return meetings;
-  }
+  // public void AddMeeting(Meetings meetings)
+  // {
+  //   meetingsList.Add(meetings);
+  // }
   // Forcing the format of the output to have this structure.
+
   public override string ToString()
   {
     string listParticipants = String.Join(", ", Participants);
